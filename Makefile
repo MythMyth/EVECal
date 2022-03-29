@@ -1,6 +1,21 @@
+CXX = g++
 CC = g++
 
-build/EveCal: build/main.o
-	$(CC) build/main.o -o build/EveCal
-build/main.o: main.cpp
-	$(CC) -c main.cpp -o build/main.o
+OUTPUT_DIR = build
+SRC = main.cpp
+SRC += BP/Item.cpp
+SRC += BP/BP.cpp
+
+TARGET = build/EveCal
+
+OBJ = $(foreach d, $(SRC), $(addsuffix .o, $(basename $d)))
+
+$(TARGET): $(OBJ)
+	$(CC) $(foreach d, $(OBJ), $(addprefix $(OUTPUT_DIR)/, $d) -o $(TARGET)
+
+$(OBJ):
+	$(CC) -c $(addsuffix .cpp, $(basename $@)) -o $(OUTPUT_DIR)/$@
+
+clean: 
+	rm -rf build
+	mkdir build
