@@ -13,6 +13,11 @@ class Item{
     Item() {
         std::cout << "Item initiated\n";
     }
+
+    string getname() {
+        return name;
+    }
+    protected:
     string name;
 };
 
