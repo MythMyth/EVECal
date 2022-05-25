@@ -22,6 +22,7 @@ class AdvComponent : public BP {
         for(int i = 0; i < len; i++) {
             if(name[i] == '_') name[i] = ' ';
         }
+        ME = 10;
     }
 };
 
