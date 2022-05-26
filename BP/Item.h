@@ -3,15 +3,10 @@
 #include<iostream>
 #include<string>
 #include<math.h>
-
+using namespace std;
 class Item{
-
-    static double Round(double n) {
-        return round(n * 100) / 100.;
-    }
     public: 
     Item() {
-        std::cout << "Item initiated\n";
     }
 
     string getname() {
@@ -19,6 +14,9 @@ class Item{
     }
     protected:
     string name;
+    static double Round(double n) {
+        return round(n * 100) / 100.;
+    }
 };
 
 #endif

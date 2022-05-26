@@ -5,7 +5,6 @@
 #include<map>
 #include "Item.h"
 
-using namespace std;
 class BP : public Item {
     public:
     double facilityReduction, ME, rigReduction;

@@ -1,12 +1,10 @@
 #include<iostream>
 #include "BP/BP.h"
 #include "BP/Item.h"
-
-using namespace std;
+#include "BP/Loader.h"
 
 int main(int argc, char** argv) {
     cout << "Started\n";
-    BP();
-    Item();
+    Loader::GetInstance();
     return 0;
 }

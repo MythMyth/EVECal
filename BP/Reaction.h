@@ -1,6 +1,6 @@
 #ifndef __REACTION__
 #define __REACTION__
-#include <BP.h>
+#include "BP.h"
 
 class Reaction : public BP {
     public:
@@ -8,7 +8,10 @@ class Reaction : public BP {
     Reaction(string fname) {
         ifstream fs(fname);
         string line;
-        if(fname.substr(0, 3) == "CM_") {
+        string indicator;
+        getline(fs, indicator);
+        indicator = indicator.substr(0, 2);
+        if(indicator == "CM") {
             getline(fs, line);
             output = atoi(line.c_str());
             getline(fs, line);

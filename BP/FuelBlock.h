@@ -1,9 +1,10 @@
 #ifndef __FUELBLOCK__
 #define __FUELBLOCK__
 
-#include<BP.h>
+#include "BP.h"
 
 class FuelBlock : public BP {
+    public:
     FuelBlock(string fname) {
         output = 40;
         material["Robotics"] = 1;
