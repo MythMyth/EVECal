@@ -58,11 +58,6 @@ class Loader {
         all_bp["Hydrogen Fuel Block"] = new FuelBlock("Hydrogen");
         all_bp["Nitrogen Fuel Block"] = new FuelBlock("Nitrogen");
         all_bp["Oxygen Fuel Block"] = new FuelBlock("Oxygen");
-
-        for(auto it: all_bp) {
-            cout << it.first << "\n";
-        }
-
     }
     static Loader* GetInstance() {
         m_mutex.lock();
