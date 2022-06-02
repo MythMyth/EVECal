@@ -59,6 +59,15 @@ class Loader {
         all_bp["Nitrogen Fuel Block"] = new FuelBlock("Nitrogen");
         all_bp["Oxygen Fuel Block"] = new FuelBlock("Oxygen");
     }
+
+    bool have_bp(string bp) {
+        return all_bp.find(bp) != all_bp.end();
+    }
+
+    BP* getBP(string bp) {
+        return all_bp[bp];
+    }
+
     static Loader* GetInstance() {
         m_mutex.lock();
         if(instance == NULL) {

@@ -4,6 +4,7 @@
 #include<fstream>
 #include<map>
 #include "Item.h"
+#include "Loader.h"
 
 class BP : public Item {
     public:
