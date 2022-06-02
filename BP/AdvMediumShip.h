@@ -6,7 +6,7 @@ class AdvMediumShip : public BP {
         ifstream fs("Blueprint/Ship/" + name);
         string line;
         getline(fs, line);
-        output = atoi(line);
+        max_run = atoi(line);
         getline(fs, line);
         ME = atoi(line);
         getline(fs, line);

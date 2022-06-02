@@ -58,6 +58,10 @@ class Loader {
         all_bp["Hydrogen Fuel Block"] = new FuelBlock("Hydrogen");
         all_bp["Nitrogen Fuel Block"] = new FuelBlock("Nitrogen");
         all_bp["Oxygen Fuel Block"] = new FuelBlock("Oxygen");
+
+        all_bp["Cerberus_0_3_6"] = new AdvMediumShip("Cerberus_0_3_6");
+        all_bp["Ishtar_0_3_6"] = new AdvMediumShip("Ishtar_0_3_6");
+
     }
 
     bool have_bp(string bp) {

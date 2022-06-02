@@ -9,7 +9,7 @@
 class BP : public Item {
     public:
     double facilityReduction, ME, rigReduction;
-    int output;
+    int output, max_run;
     BP() {
         output = 1;
     }

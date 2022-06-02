@@ -7,6 +7,7 @@ class FuelBlock : public BP {
     public:
     FuelBlock(string fname) {
         output = 40;
+        max_run = 200;
         material["Robotics"] = 1;
         material["Enriched Uranium"] = 4;
         material["Mechanical Parts"] = 4;
