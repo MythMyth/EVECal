@@ -40,7 +40,6 @@ Loader::Loader() {
 
     all_bp["Cerberus_0_3_6"] = new AdvMediumShip("Cerberus_0_3_6");
     all_bp["Ishtar_0_3_6"] = new AdvMediumShip("Ishtar_0_3_6");
-
 }
 
 bool Loader::have_bp(string bp) {
@@ -53,10 +52,11 @@ BP* Loader::getBP(string bp) {
 
 Loader* Loader::GetInstance() {
     m_mutex.lock();
-    if(instance == NULL) {
-        instance = new Loader();
+    if(Loader::instance == NULL) {
+        Loader::instance = new Loader();
     }
     m_mutex.unlock();
+    return instance;
 }
 
 Loader* Loader::instance;

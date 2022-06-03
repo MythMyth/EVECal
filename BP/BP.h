@@ -5,6 +5,7 @@
 #include<fstream>
 #include<map>
 #include "Item.h"
+#include "../Debug/Debug.h"
 
 class Loader;
 class BP : public Item {

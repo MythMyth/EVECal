@@ -10,6 +10,8 @@ class AdvComponent : public BP {
         string line;
         getline(fs, line);
         output = atoi(line.c_str());
+        getline(fs, line);
+        max_run = atoi(line.c_str());
         while(getline(fs, line)) {
             int pos = line.find(" x ");
             if(pos == -1) continue;
