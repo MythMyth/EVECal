@@ -1,3 +1,5 @@
+#ifndef __ADVSHIP__
+#define __ADVSHIP__
 #include "BP.h"
 
 class AdvMediumShip : public BP {
@@ -6,16 +8,16 @@ class AdvMediumShip : public BP {
         ifstream fs("Blueprint/Ship/" + name);
         string line;
         getline(fs, line);
-        max_run = atoi(line);
+        max_run = atoi(line.c_str());
         getline(fs, line);
-        ME = atoi(line);
+        ME = atoi(line.c_str());
         getline(fs, line);
-        TE = atoi(line);
+        TE = atoi(line.c_str());
         while(getline(fs, line)) {
             int place = line.find(" x ");
             if(place == -1) continue;
             string mat_name = line.substr(0, place);
-            int amount = line.substr(place + 3);
+            int amount = atoi(line.substr(place + 3).c_str());
             material[mat_name] = amount;
         }
     }
@@ -23,3 +25,5 @@ class AdvMediumShip : public BP {
     private:
     int TE;
 };
+
+#endif

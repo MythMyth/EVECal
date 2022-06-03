@@ -3,6 +3,7 @@ CC = g++
 
 OUTPUT_DIR = build
 SRC = main.cpp
+SRC += BP/Loader.cpp
 SRC += BP/Item.cpp
 SRC += BP/BP.cpp
 

@@ -1,21 +1,20 @@
 #ifndef __BP__
 #define __BP__
+
 #include<iostream>
 #include<fstream>
 #include<map>
 #include "Item.h"
-#include "Loader.h"
 
+class Loader;
 class BP : public Item {
     public:
-    double facilityReduction, ME, rigReduction;
-    int output, max_run;
-    BP() {
-        output = 1;
-    }
+    double facilityReduction, rigReduction;
+    int output, max_run, ME;
     map<string, int> material;
+    map<string, int> Calculate(int amount, bool round = false);
 
-    map<string, int> Calculate(int run);
+    BP();
 
 };
 

@@ -11,7 +11,7 @@ class Reaction : public BP {
         string indicator;
         getline(fs, indicator);
         indicator = indicator.substr(0, 2);
-        max_run = 1000
+        max_run = 1000;
         if(indicator == "CM") {
             getline(fs, line);
             output = atoi(line.c_str());

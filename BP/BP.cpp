@@ -1,6 +1,11 @@
 #include "BP.h"
+#include "Loader.h"
 
-map<string, int> BP::Calculate(int amount, bool round = false) {
+BP::BP() {
+    output = 1;
+}
+
+map<string, int> BP::Calculate(int amount, bool round) {
     int run = amount / output;
     if(amount %output != 0) run++;
     map<string, int> ret;
@@ -15,17 +20,17 @@ map<string, int> BP::Calculate(int amount, bool round = false) {
 
     map<string, int> lower_mat;
     for(auto it: ret) {
-        if(Loader::GetInstance()->have_bp(it->first)) {
-            BP *bp = Loader::GetInstance()->getBP(it->first);
-            map<string, int> lower_ret = bp->Calculate(it->second, round);
+        if(Loader::GetInstance()->have_bp(it.first)) {
+            BP *bp = Loader::GetInstance()->getBP(it.first);
+            map<string, int> lower_ret = bp->Calculate(it.second, round);
             for(auto lit: lower_ret) {
-                lower_mat[lit->first] += lit->second;
+                lower_mat[lit.first] += lit.second;
             }
         }
     }
 
     for(auto it: lower_mat) {
-        ret[it->first] += it->second;
+        ret[it.first] += it.second;
     }
 
     return ret;
