@@ -4,8 +4,8 @@
 
 class AdvMediumShip : public BP {
     public:
-    AdvMediumShip(string name) {
-        ifstream fs("Blueprint/Ship/" + name);
+    AdvMediumShip(string fname) {
+        ifstream fs("Blueprint/Ship/" + fname);
         string line;
         getline(fs, line);
         max_run = atoi(line.c_str());
@@ -20,6 +20,9 @@ class AdvMediumShip : public BP {
             int amount = atoi(line.substr(place + 3).c_str());
             material[mat_name] = amount;
         }
+        name = fname;
+        
+        Debug::GetInstance()->Log(LOG_LEVEL_LOW, "Created BP: %s", fname.c_str());
     }
 
     private:

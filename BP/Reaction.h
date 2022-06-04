@@ -6,6 +6,7 @@ class Reaction : public BP {
     public:
 
     Reaction(string fname) {
+        Debug::GetInstance()->Log(LOG_LEVEL_LOW, "Create BP: %s", fname.c_str());
         ifstream fs(fname);
         string line;
         string indicator;

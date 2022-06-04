@@ -40,6 +40,11 @@ Loader::Loader() {
 
     all_bp["Cerberus_0_3_6"] = new AdvMediumShip("Cerberus_0_3_6");
     all_bp["Ishtar_0_3_6"] = new AdvMediumShip("Ishtar_0_3_6");
+
+    Debug::GetInstance()->Log(LOG_LEVEL_MED, "All bp:");
+    for(auto it: all_bp) {
+        Debug::GetInstance()->Log(LOG_LEVEL_MED, "    %s x %d", it.first.c_str(), it.second);
+    }
 }
 
 bool Loader::have_bp(string bp) {

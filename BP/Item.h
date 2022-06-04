@@ -3,6 +3,8 @@
 #include<iostream>
 #include<string>
 #include<math.h>
+#include "../Debug/Debug.h"
+
 using namespace std;
 
 class Item{
@@ -16,7 +18,9 @@ class Item{
     protected:
     string name;
     static double Round(double n) {
-        return round(n * 100) / 100.;
+        double ret = round(n * 100) / 100.;
+        Debug::GetInstance()->Log(LOG_LEVEL_LOW, "return: %f", ret);
+        return ret;
     }
 };
 
