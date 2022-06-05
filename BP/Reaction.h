@@ -7,11 +7,10 @@ class Reaction : public BP {
 
     Reaction(string fname) {
         Debug::GetInstance()->Log(LOG_LEVEL_LOW, "Create BP: %s", fname.c_str());
-        ifstream fs(fname);
+        ifstream fs("Blueprint/Reaction/" + fname);
         string line;
         string indicator;
         getline(fs, indicator);
-        indicator = indicator.substr(0, 2);
         max_run = 1000;
         if(indicator == "CM") {
             getline(fs, line);

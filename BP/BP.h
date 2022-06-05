@@ -12,7 +12,7 @@ class BP : public Item {
     double facilityReduction, rigReduction;
     int output, max_run, ME;
     map<string, int> material;
-    map<string, int> Calculate(int amount, bool round = false);
+    map<string, int> Calculate(int amount, int &true_run, bool round = false);
 
     BP();
 

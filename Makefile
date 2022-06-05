@@ -7,6 +7,7 @@ SRC = main.cpp
 SRC += BP/Loader.cpp
 SRC += BP/Item.cpp
 SRC += BP/BP.cpp
+SRC += BuildPlan.cpp
 
 TARGET = $(OUTPUT_DIR)/$(OUTPUT_NAME)
 

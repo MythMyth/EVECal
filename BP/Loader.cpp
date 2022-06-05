@@ -41,9 +41,13 @@ Loader::Loader() {
     all_bp["Cerberus_0_3_6"] = new AdvMediumShip("Cerberus_0_3_6");
     all_bp["Ishtar_0_3_6"] = new AdvMediumShip("Ishtar_0_3_6");
 
-    Debug::GetInstance()->Log(LOG_LEVEL_MED, "All bp:");
+    Debug::GetInstance()->Log(LOG_LEVEL_LOW, "All bp:");
     for(auto it: all_bp) {
-        Debug::GetInstance()->Log(LOG_LEVEL_MED, "    %s x %d", it.first.c_str(), it.second);
+        Debug::GetInstance()->Log(LOG_LEVEL_LOW, "    %s", it.first.c_str());
+        BP * bp = it.second;
+        for(auto item: bp->material) {
+            Debug::GetInstance()->Log(LOG_LEVEL_LOW, "        %s x %d", item.first.c_str(), item.second);
+        }
     }
 }
 
