@@ -2,7 +2,10 @@
 
 void Storage::Load() {
     ifstream fs("Storage");
-
+    string line;
+    while(getline(fs, line)) {
+        if()
+    }
 }
 
 void Storage::Add(string component, int amount) {
