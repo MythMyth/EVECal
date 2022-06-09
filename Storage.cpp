@@ -1,5 +1,10 @@
 #include "Storage.h"
 
+void Storage::Load() {
+    ifstream fs("Storage");
+
+}
+
 void Storage::Add(string component, int amount) {
     storedComponent[component] += amount;
 }

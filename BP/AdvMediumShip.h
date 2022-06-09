@@ -21,7 +21,8 @@ class AdvMediumShip : public BP {
             material[mat_name] = amount;
         }
         name = fname;
-        
+        rigReduction = 5.0;
+        facilityReduction = 1.0;
         Debug::GetInstance()->Log(LOG_LEVEL_LOW, "Created BP: %s", fname.c_str());
     }
 

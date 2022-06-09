@@ -12,6 +12,7 @@ class Reaction : public BP {
         string indicator;
         getline(fs, indicator);
         max_run = 1000;
+        rigReduction = 2.6;
         if(indicator == "CM") {
             getline(fs, line);
             output = atoi(line.c_str());
